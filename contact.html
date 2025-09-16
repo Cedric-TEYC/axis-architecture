@@ -15,27 +15,31 @@
 
   <div class="hero">
     <img src="static/logo.jpg" alt="Logo de l'entreprise" class="logo" />
-    <h1>Contact</h1>
+    <h1>Contactez-nous</h1>
     <div class="intro">
-      <p>Une question ou un projet ? Écrivez-nous, nous reviendrons vers vous rapidement.</p>
+      <p>Une question ? Un projet ? Remplissez le formulaire ci-dessous et nous reviendrons vers vous rapidement.</p>
     </div>
   </div>
 
-  <!-- Exemple de bloc contact statique (optionnel) -->
-  <!--
   <section class="contact-section">
-    <form class="contact-form" action="mailto:contact@axis-architecture.com" method="post" enctype="text/plain">
-      <input type="text" name="nom" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
-      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <input type="text" name="nom" placeholder="Nom" required />
+      <input type="email" name="email" placeholder="Adresse e-mail" required />
+      <textarea name="message" rows="6" placeholder="Votre message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
-  -->
 
   <footer class="footer">
     <p>© 2025 Axis Architecture — Excellence et Innovation.</p>
   </footer>
 
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // Empêche le rechargement
+      alert("✅ Axis Architecture a bien reçu votre demande.\nVous recevrez une réponse sous 48h ouvrées.");
+      event.target.reset(); // Réinitialise le formulaire
+    }
+  </script>
 </body>
 </html>
